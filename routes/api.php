@@ -25,4 +25,5 @@ use App\Http\Controllers\API\UserController;
 
 Route::middleware('jwt.verify')->group(function () {
     Route::get('posts', [PostController::class, 'all']);
+    Route::get('posts/{id}', [PostController::class, 'show']);
 });
